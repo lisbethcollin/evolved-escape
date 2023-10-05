@@ -3,8 +3,28 @@ const { data } = Astro.props;
 ---
 
 <article>
-    <img src={data.img} alt="">
-    <h3>{data.name}</h3>
-    <h4>{data.employment}</h4>
+    <div class="round-image-container">
+        <img src={data.img} alt="" class="round-image">
+    </div>
+    <h4>{data.name}</h4>
+    <h7>{data.employment}</h7>
 
 </article>
+
+<style>
+   .round-image-container {
+  width: 450px; /* Adjust this value to your desired size */
+  height: 450px; /* Adjust this value to your desired size */
+  border-radius: 50%;
+  overflow: hidden; /* Clip the image to the container */
+  display: inline-block; /* Keep the containers inline */
+  margin: 10px; /* Adjust the margin as needed */
+}
+
+.round-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+</style>

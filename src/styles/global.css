@@ -1,10 +1,21 @@
 :root {
 }
-main {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   background: radial-gradient(circle, transparent 25%, #06053c 26%), linear-gradient(45deg, transparent 46%, #131243 47%, #131243 52%, transparent 53%), linear-gradient(135deg, transparent 46%, #131243 47%, #131243 52%, transparent 53%);
   background-size: 3em 3em;
   background-color: #06053c;
   opacity: 1;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+main {
+  max-width: 1200px;
+  height: 100%;
 }
