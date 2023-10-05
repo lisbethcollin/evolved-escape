@@ -10,27 +10,17 @@ const response = await fetch("https://qkisybglwngibxovgjqw.supabase.co/rest/v1/s
     },
 })
 const data = await response.json();
-console.log(data);
-
+import MainLayout from "../layouts/MainLayout.astro"
 import Card from "../components/Card.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Speakers</title>
-	</head>
-	<body>
-		<h1>Speakers</h1>
-        <section>
-            {
-              data.map((thing) => {
-                return <Card data={thing} />;
-              })
-            }
-          </section>
-	</body>
-</html>
+<MainLayout>
+    <h1>Speakers</h1>
+    <section>
+        {
+          data.map((thing) => {
+            return <Card data={thing} />;
+          })
+        }
+      </section>
+</MainLayout>
