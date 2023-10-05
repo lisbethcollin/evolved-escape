@@ -1,4 +1,10 @@
 ---
-const response = await fetch("...");
-const data = await response.json();
+const { data } = Astro.props;
 ---
+
+<article>
+    <img src={data.img} alt="">
+    <h3>{data.name}</h3>
+    <h4>{data.employment}</h4>
+
+</article>
