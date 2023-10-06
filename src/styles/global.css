@@ -1,5 +1,58 @@
 :root {
+  /* Farver */
+  --text-color-overskrift: FF8126;
+  --text-color-white: fffff;
+  --text-color-button: 06214D;
+  --text-color-other: 00C2CB;
+  --button-color: 66D6B8;
+  --hover-color: F8EF21;
+
+  /* Typografi */
+  --font-size-h1: 7.5rem;
+  --font-size-h2: 6.625rem;
+
+  --font-size-h1-mobile: 4.5rem;
+  --font-size-h2-mobile: 4.5rem;
+
+  --font-size-xxl: 3.5rem; /* size 56 */
+  --font-size-xl: 2.5rem; /* size 40 */
+  --font-size-l: 2rem; /* size 32 */
+  --font-size-m: 1.5rem; /* size 24 */
+  --font-size-s: 1.25rem; /* size 20 */
+  --font-size-xs: 1rem; /* size 16 */
+  --font-size-xxs: 0.5rem; /* size 8 */
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+
+  --font-family-header: oxanium;
+  --font-family-text: inter;
+  --font-family-link: open sans;
+  --font-family-earlybird: kalam;
+
+  /* Spacing */
+  --space-xxxs: 0.25rem;
+  --space-xxs: 0.375rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 2.5rem;
+  --space-xxxl: 3rem;
+
+  /* Border radius */
+  --border-radius-textbox: 4rem;
+  --border-radius-button: 1rem;
+  --border-radius-image: 5rem;
+  --border-radius-round: 50%;
+
+  /* Box shadow */
+  --text-shadow: -5px 5px 0px #531a6f;
+  --img-shadow-down: -10px 10px 0px 0px #531a6f;
+  --img-shadow-up: 10px -10px 0px 0px #531a6f;
 }
+
 * {
   margin: 0;
   padding: 0;
