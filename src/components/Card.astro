@@ -4,7 +4,7 @@ const { data } = Astro.props;
 
 <article>
     <div class="round-image-container">
-        <img src={data.img} alt="" class="round-image">
+        <img src={"imgs/speakers/" + data.img} alt="" class="round-image">
     </div>
     <h4>{data.name}</h4>
     <h7>{data.employment}</h7>
