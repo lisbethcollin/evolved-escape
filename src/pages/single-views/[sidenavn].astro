@@ -10,14 +10,14 @@ export async function getStaticPaths() {
 }
   const data = await fetch(url, options).then(response => response.json());
 
-  return data.map((post) => {
+  return data.map((speaker) => {
     return {
-      params: { sidenavn: post.slug },
-      props: { post },
+      params: { sidenavn: speaker.slug },
+      props: { speaker },
     };
   });
 }
 
-const { post } = Astro.props;
+const { speaker } = Astro.props;
 ---
-<h1>{post.name}</h1>
+<h1>{speaker.name}</h1>
