@@ -1,11 +1,11 @@
 :root {
   /* Farver */
-  --text-color-overskrift: FF8126;
-  --text-color-white: fffff;
-  --text-color-button: 06214D;
-  --text-color-other: 00C2CB;
-  --button-color: 66D6B8;
-  --hover-color: F8EF21;
+  --text-color-overskrift: #ff8126;
+  --text-color-white: #fff;
+  --text-color-button: #06214d;
+  --text-color-other: #00c2cb;
+  --button-color: #66d6b8;
+  --hover-color: #f8ef21;
 
   /* Typografi */
   --font-size-h1: 7.5rem;
