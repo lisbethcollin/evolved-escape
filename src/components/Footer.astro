@@ -8,7 +8,7 @@
 
     <article>
         <h6>Follow us on Social Media</h6>
-        <article>
+        <article class="logo_grid">
             <img src="public/imgs/icons/facebook.webp" alt="">
             <img src="public/imgs/icons/instagram.webp" alt="">
             <img src="public/imgs/icons/youtube.webp" alt="">
@@ -18,15 +18,44 @@
 
     <article>
         <h6>Sign up for our newletter</h6>
-        <button></button>
+        <button>Keep in touch</button>
     </article>
-
 </section>
 <img src="" alt="">
 
 <style>
+    h6{
+        font-family: var(--font-family-header);
+        font-size: var(--font-size-m);
+    }
+    p{
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-xs);
+    }
     #mail{
         columns: ;
         text-decoration: underline;
+        color: var(--text-color-overskrift);
+
     }
+    button {
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-s);
+        padding: var(--space-md);
+        background-color: var(--button-color);
+        border-radius: var(--border-radius-button);
+    }
+    .logo_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    article{
+        
+    }
+    @media only screen and (min-width: 768px) {
+    section{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 </style>
