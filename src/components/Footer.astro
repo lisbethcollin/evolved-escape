@@ -30,16 +30,17 @@ import "../styles/global.css";
     h6{
         font-family: var(--font-family-header);
         font-size: var(--font-size-m);
+        color: var(--text-color-white);
     }
     p{
         font-family: var(--font-family-text);
         font-size: var(--font-size-xs);
+        color: var(--text-color-white);
     }
     #mail{
         columns: ;
         text-decoration: underline;
         color: var(--text-color-overskrift);
-
     }
     button {
         font-family: var(--font-family-text);
@@ -47,18 +48,27 @@ import "../styles/global.css";
         padding: var(--space-md);
         background-color: var(--button-color);
         border-radius: var(--border-radius-button);
+        border: none;
+        color: var(--text-color-button);
     }
     .logo_grid{
-        display: grid;
+        display: flex;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: flex-start;
+        gap: 2%;
+        margin-top: 2%;
     }
     article{
 
     }
+    img {
+        width: 10%;
+    }
     @media only screen and (min-width: 768px) {
     section{
-      display: grid;
+      display: flex;
       grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
     }
   }
 </style>
