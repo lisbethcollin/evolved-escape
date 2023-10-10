@@ -56,9 +56,7 @@ import MainLayout from "../layouts/MainLayout.astro"
         <section>
             <img src="" alt="">
             <h4>A Decade of Innovation & Impact</h4>
-            <p>The 2024 event will be the 10th consecutive UX Copenhagen conference. The conference respects principles like having a diverse range of speakers, and presenting as many different points of view as possible on stage. We support charities, new startups, and initiatives that promote UX and doing good. 
- 
-The conference will be a hybrid event, in-person and online. We will be hosting hands-on, live workshops; and live Q&A sessions with each of this year´s speakers. There will be raffles, book sales, and lots of opportunity to network.</p>
+            <p>The 2024 event will be the 10th consecutive UX Copenhagen conference. The conference respects principles like having a diverse range of speakers, and presenting as many different points of view as possible on stage. We support charities, new startups, and initiatives that promote UX and doing good. The conference will be a hybrid event, in-person and online. We will be hosting hands-on, live workshops; and live Q&A sessions with each of this year´s speakers. There will be raffles, book sales, and lots of opportunity to network.</p>
         </section>
     </article>
 	
@@ -71,27 +69,26 @@ The conference will be a hybrid event, in-person and online. We will be hosting 
     <article>
         <h3>Why we´re great!</h3>
         <section>
-            <p>9</p>
-            <p>Years of experience</p>
+            <p class="box_number">9</p>
+            <p class="box_text">Years of experience</p>
         </section>
     	<section>
-        	<p>20+</p>
-        	<p>Speakers each year</p>
+        	<p class="box_number">20+</p>
+        	<p class="box_text">Speakers each year</p>
     	</section>
      	<section>
-        	<p>75+</p>
-        	<p>Workshops hosted</p>
+        	<p class="box_number">75+</p>
+        	<p class="box_text">Workshops hosted</p>
     	</section>
     	<section>
-        	<p>2000+</p>
-        	<p>Attendees</p>
+        	<p class="box_number">2000+</p>
+        	<p class="box_text">Attendees</p>
     	</section>
     </article>
 </MainLayout>
 
 <style>
     h1{
-    	font-family: var( --font-family-header); 
     	font-size: var( --font-size-h1-mobile);
        	color: var(--text-color-overskrift);
        	text-shadow: var(--text-shadow);
@@ -99,21 +96,23 @@ The conference will be a hybrid event, in-person and online. We will be hosting 
 		margin-top: var(--space-xxxl);
     }
     h3{
-		font-family: var(--font-family-header); 
     	font-size: var(--font-size-xl);
 		font-weight: var(--font-weight-semibold);
 		color: var(--text-color-overskrift);
 	   	text-align: center;
 		margin: 2rem 0;
     }
+	h4{
+    	font-size: var(--font-size-m);
+		font-weight: var(--font-weight-semibold);
+		color: var(--text-color-overskrift);
+	}
     h5{
-		font-family: var(--font-family-header); 
     	font-size: var(--font-size-xs);
 		font-weight: var(--font-weight-bold);
 	   	text-align: center;
     }
 	h6{
-		font-family: var(--font-family-header); 
     	font-size: var(--font-size-m);
 	}
 	p{
@@ -150,9 +149,15 @@ The conference will be a hybrid event, in-person and online. We will be hosting 
 	.mobile_hidden{
 		display: none;
 	}
-button {
+	button {
 		margin: 2rem;
-}
+	}
+	.box_number{
+		fon
+	}
+	.box_text{
+
+	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
 			display: grid;

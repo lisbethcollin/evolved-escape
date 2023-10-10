@@ -13,7 +13,8 @@
   --font-size-h2: 6.625rem;
 
   --font-size-h1-mobile: 4.5rem;
-  --font-size-h2-mobile: 4.5rem;
+
+  --font-size-box: 4rem;
 
   --font-size-xxl: 3.5rem; /* size 56 */
   --font-size-xl: 2.5rem; /* size 40 */
@@ -29,7 +30,6 @@
   --font-family-header: oxanium;
   --font-family-text: inter;
   --font-family-link: open sans;
-  --font-family-earlybird: kalam;
 
   /* Spacing */
   --space-xxxs: 0.25rem;
@@ -67,6 +67,7 @@ body {
   background-color: #06053c;
   opacity: 1;
   color: #fff;
+  font-family: var(--font-family-header);
 }
 img {
   max-width: 100%;
