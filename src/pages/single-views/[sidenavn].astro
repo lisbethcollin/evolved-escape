@@ -31,7 +31,7 @@ const { speaker } = Astro.props;
         <h7>{speaker.employment}</h7>
     </article>
 </section>
-<section>
+<section class="box">
 <h7>Talk theme</h7>
 <h4>{speaker.talk_theme}</h4>
 <p>{speaker.talk_description}</p>
@@ -39,5 +39,36 @@ const { speaker } = Astro.props;
 </MainLayout>
 
 <style>
+h1{
+  font-family: var( --font-family-header); 
+    	font-size: var( --font-size-h1-mobile);
+       	color: var(--text-color-overskrift);
+}
 
+img{
+  border-radius: var( --border-radius-image);
+   margin-left: -70px;
+   box-shadow: var(  --img-shadow-down);
+}
+
+.grid_1-1{
+  	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+	.box{
+		background-color: var(--trans-color);
+		border-radius: var(--border-radius-textbox);
+		padding: var(--space-xl);
+		margin:
+		}
+@media only screen and (min-width: 768px){
+
+  .grid_1-1{
+    display: grid;
+			grid-template-columns: 1fr 1fr;
+  }
+
+}
 </style>
