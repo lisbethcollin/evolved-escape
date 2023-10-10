@@ -1,4 +1,5 @@
 ---
+import MainLayout from "../../layouts/MainLayout.astro";
 export async function getStaticPaths() {
     const url = "https://qkisybglwngibxovgjqw.supabase.co/rest/v1/speakers";
     const options = {
@@ -20,5 +21,23 @@ export async function getStaticPaths() {
 
 const { speaker } = Astro.props;
 ---
-<img src={"imgs/speakers/" + data.img} alt="">
-<h1>{speaker.name}</h1>
+
+<MainLayout>
+    <section class="grid_1-1">
+            <img src={"/imgs/speakers/" + speaker.img} alt="">
+    <article>
+        <h7>2024 speaker</h7>
+        <h1>{speaker.name}</h1>
+        <h7>{speaker.employment}</h7>
+    </article>
+</section>
+<section>
+<h7>Talk theme</h7>
+<h4>{speaker.talk_theme}</h4>
+<p>{speaker.talk_description}</p>
+</section>
+</MainLayout>
+
+<style>
+
+</style>

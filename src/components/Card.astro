@@ -2,6 +2,7 @@
 const { data } = Astro.props;
 ---
 
+<a href=`single-views/${data.slug}`>
 <article>
     <div class="round-image-container">
         <img src={"imgs/speakers/" + data.img} alt="" class="round-image">
@@ -10,21 +11,7 @@ const { data } = Astro.props;
     <h7>{data.employment}</h7>
 
 </article>
+</a>
 
 <style>
-   .round-image-container {
-  width: 450px; /* Adjust this value to your desired size */
-  height: 450px; /* Adjust this value to your desired size */
-  border-radius: var(--border-radius-round);
-  overflow: hidden; /* Clip the image to the container */
-  display: inline-block; /* Keep the containers inline */
-  margin: 10px; /* Adjust the margin as needed */
-}
-
-.round-image {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: auto;
-}
 </style>
