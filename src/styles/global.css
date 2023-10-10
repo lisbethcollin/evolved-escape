@@ -99,5 +99,4 @@ button {
   border-radius: var(--border-radius-button);
   border: none;
   color: var(--text-color-button);
-  margin: 2rem;
 }
