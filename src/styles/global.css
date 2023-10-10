@@ -53,6 +53,7 @@
   --border-radius-round: 50%;
 
   --border-radius-side-textbox: 4rem 0 0 4rem;
+ --border-radius-side-image: 0 5rem 5rem 0;  
 
   /* Box shadow */
   --text-shadow: -5px 5px 0px #531a6f;

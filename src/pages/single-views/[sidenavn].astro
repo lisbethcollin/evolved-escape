@@ -26,31 +26,63 @@ const { speaker } = Astro.props;
     <section class="grid_1-1">
             <img src={"/imgs/speakers/" + speaker.img} alt="">
     <article>
-        <h7>2024 speaker</h7>
+        <h7 class="hvidh7">2024 speaker</h7>
         <h1>{speaker.name}</h1>
-        <h7>{speaker.employment}</h7>
+        <h7 class="blåh7">{speaker.employment}</h7>
+     <hr>
     </article>
 </section>
 <section class="box">
-<h7>Talk theme</h7>
+<h7 class="orangeh7">Talk theme</h7>
 <h4>{speaker.talk_theme}</h4>
 <p>{speaker.talk_description}</p>
 </section>
 </MainLayout>
 
 <style>
+  /* her er en marginleft regl 2rem */
 h1{
   font-family: var( --font-family-header); 
     	font-size: var( --font-size-h1-mobile);
        	color: var(--text-color-overskrift);
+        margin-left: 2rem;
 }
-
+/* her er en img bottom regl */
 img{
-  border-radius: var( --border-radius-image);
-   margin-left: -70px;
+  border-radius: var(  --border-radius-side-image);
+   
    box-shadow: var(  --img-shadow-down);
+   margin-bottom: 4rem;
 }
 
+h7{
+  font-family: var( --font-family-text);
+  font-size: var(--font-size-xs);
+}
+.hvidh7{
+   margin-left: 2rem;
+}
+.blåh7{
+  color: var(--text-color-other);
+   margin-left: 2rem;
+}
+.orangeh7{
+  color: var(  --text-color-overskrift);
+}
+
+hr{
+		margin-top: var(--space-xl);
+	}
+h4{
+    	font-size: var(--font-size-m);
+		font-weight: var(--font-weight-semibold);
+		color: var( --text-color-white);
+    
+	}
+p{
+  font-family: var( --font-family-text);
+  font-size: var(--font-size-xs);
+}
 .grid_1-1{
   	display: block;
   margin-left: auto;
@@ -59,9 +91,10 @@ img{
 
 	.box{
 		background-color: var(--trans-color);
-		border-radius: var(--border-radius-textbox);
+		border-radius: var(--border-radius-side-textbox);
 		padding: var(--space-xl);
-		margin:
+
+    
 		}
 @media only screen and (min-width: 768px){
 
