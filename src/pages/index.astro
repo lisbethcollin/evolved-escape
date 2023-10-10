@@ -65,10 +65,9 @@ import MainLayout from "../layouts/MainLayout.astro"
         <p>Join us and experience the chance to learn from a diverse range of industry experts and connect with peers!</p>
     <button>Buy now</button>
     </article>
-
-    <article>
-        <h3>Why we´re great!</h3>
-        <section>
+	<h3>Why we´re great!</h3>
+    <article class="box_shadow">
+		<section>
             <p class="box_number">9</p>
             <p class="box_text">Years of experience</p>
         </section>
@@ -141,9 +140,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 	}
 	.grid_1-1-1{
 		display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  		margin-left: auto;
+  		margin-right: auto;
+  		text-align: center;
 
 	}
 	.mobile_hidden{
@@ -153,10 +152,28 @@ import MainLayout from "../layouts/MainLayout.astro"
 		margin: 2rem;
 	}
 	.box_number{
-		fon
+		font-size: var(--font-size-xl);
+  		font-family: var(--font-family-header);
+		font-weight: var(--font-weight-semibold);
 	}
 	.box_text{
-
+		font-size: var(--font-size-m);
+  		font-family: var(--font-family-header);
+		font-weight: var(--font-weight-semibold);
+	}
+	.box_shadow{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.box_shadow section{
+		background-color: var(--trans-color);
+		padding: var(--space-box-mobile);
+		box-shadow: var(--img-shadow-down);
+		border-radius: 3rem;
+		width: 150px;
+		height: 150px;
+		text-align: center;
+		justify-content: center;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
@@ -180,5 +197,17 @@ import MainLayout from "../layouts/MainLayout.astro"
 		#text_in_box {
 			max-width: 80%;
 		}
+		.box_number{
+		font-size: var(--font-size-box);
+	}
+	.box_text{
+		font-size: var(--font-size-l);
+	}
+		.box_shadow section{
+		border-radius: var(--border-radius-textbox);
+		padding: var(--space-box);
+		width: 300px;
+		height: 300px;
+	}
 	}
 </style>
