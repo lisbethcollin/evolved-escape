@@ -66,7 +66,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 	<hr>
     <article>
         <h3>Get your ticket</h3>
-        <p >Join us and experience the chance to learn from a diverse <br> range of industry experts and connect with peers!</p>
+        <p id="join_us">Join us and experience the chance to learn from a diverse <br> range of industry experts and connect with peers!</p>
     <button>Buy now</button>
     </article>
 	<hr>
@@ -194,6 +194,29 @@ import MainLayout from "../layouts/MainLayout.astro"
 	#img_right {
 		box-shadow: var(--img-shadow-up);
 		right: -4rem;
+	}
+
+	#text_right{
+		margin: 30px;
+		padding: var( --space-md);
+	}
+	#text_right h4{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	#text_left{
+		margin: 30px;
+		padding: var( --space-md);
+	}
+	#text_left h4{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	#join_us{
+		margin: 30px;
+		text-align: center;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
