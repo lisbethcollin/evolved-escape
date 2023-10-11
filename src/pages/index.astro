@@ -178,8 +178,12 @@ import MainLayout from "../layouts/MainLayout.astro"
 		text-align: center;
 		justify-content: center;
 	}
+	.grid_1-1{
+		position: relative;
+  		overflow-x: hidden;
+	}
 	#img_left, #img_right {
-		border-radius: var(--border-radius-image);
+		border-radius: 1rem;
 		position: relative;
 	}
 	#img_left {
@@ -189,7 +193,6 @@ import MainLayout from "../layouts/MainLayout.astro"
 	#img_right {
 		box-shadow: var(--img-shadow-up);
 		right: -4rem;
-		overflow: clip;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
@@ -226,7 +229,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 		height: 300px;
 	}
 	#img_left, #img_right {
-		border-radius: 1rem;
+		border-radius: var(--border-radius-image);
 	}
 	#img_left {
 		left: -4rem;
