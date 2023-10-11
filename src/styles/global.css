@@ -81,6 +81,7 @@ img {
 main {
   max-width: 1200px;
   height: 100%;
+  margin: auto;
 }
 .round-image-container {
   width: 300px; /* Adjust this value to your desired size */
