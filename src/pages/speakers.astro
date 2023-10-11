@@ -16,7 +16,7 @@ import Card from "../components/Card.astro";
 
 <MainLayout>
   <h1>WELCOME OUR SPEAKERS</h1>
-  <div>
+  <article>
     <h2>Speakers 2024</h2>
     <section>
         {
@@ -25,32 +25,37 @@ import Card from "../components/Card.astro";
           })
         }
       </section>
-      </div>
+    </article>
 </MainLayout>
 
 <style>
- 
-  @media only screen and (max-width: 768px){
-    div{
-display: grid;
-place-items: center;
-}
- }
- section{
+   h1{
+      text-align: center;
+    }
+
+
+ article{
   display: grid;
   place-items: center;
 grid-template-columns: 1fr;
-max-width: 300px;
- }
-  @media only screen and (min-width: 768px) {
-    section{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
 
+ }
+
+ @media only screen and (min-width: 768px){
+
+    section{
+      display: grid;     
+grid-template-columns: 1fr 1fr ;
     }
-  h1{
-      text-align: center;
+ }
+
+
+  @media only screen and (min-width: 1000px) {
+    section{
+      display: grid;     
+grid-template-columns: 1fr 1fr 1fr;
     }
+ 
 
   }
 </style>
