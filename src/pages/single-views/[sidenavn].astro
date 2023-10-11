@@ -24,89 +24,118 @@ const { speaker } = Astro.props;
 
 <MainLayout>
     <section class="grid_1-1">
-            <img src={"/imgs/speakers/" + speaker.img} alt="">
-    <article>
-        <h7 class="hvidh7">2024 speaker</h7>
+            <img class="grig_img" src={"/imgs/speakers/" + speaker.img} alt="">
+    <article class="grid_tekst">
+        <h7>2024 speaker</h7>
         <h1>{speaker.name}</h1>
-        <h7 class="blåh7">{speaker.employment}</h7>
+        <h7 class="blaah7">{speaker.employment}</h7>
      <hr>
     </article>
 </section>
-<section class="box">
-<h7 class="orangeh7">Talk theme</h7>
-<h4>{speaker.talk_theme}</h4>
-<p>{speaker.talk_description}</p>
-</section>
+
+
+    <section class="grid_box">
+      <div></div>
+      <div class="box">
+      <h7 class="orangeh7">Talk theme</h7>
+      <h4>{speaker.talk_theme}</h4>
+      <p>{speaker.talk_description}</p>
+    </div>
+    </section>
+
 </MainLayout>
 
 <style>
+  
+  .box h7,
+  .box h4,
+  .box p {
+    margin-top: 10px; /* Tilføj et mellemrum over h7, h4 og p inden for .box */
+  }
+  article{
+    padding-left: 2rem;
+    
+    }
   /* her er en marginleft regl 2rem */
 h1{
   font-family: var( --font-family-header); 
     	font-size: var( --font-size-h1-mobile);
        	color: var(--text-color-overskrift);
-        margin-left: 2rem;
+      
 }
 /* her er en img bottom regl */
-img{
-  border-radius: var(  --border-radius-side-image);
-   
-   box-shadow: var(  --img-shadow-down);
-   margin-bottom: 4rem;
-  
+ img{
+  border-radius: var(--border-radius-side-image);
+  box-shadow: var(--img-shadow-down);
+  margin-bottom: 3rem;
+  margin-left: -3rem;
 }
-
 h7{
   font-family: var( --font-family-text);
   font-size: var(--font-size-xs);
 }
-.hvidh7{
-   margin-left: 2rem;
-}
-.blåh7{
-  color: var(--text-color-other);
-   margin-left: 2rem;
-   margin-top: 10rem;
+.blaah7{
+  color: var(--text-color-other); 
 }
 .orangeh7{
   color: var(  --text-color-overskrift);
 }
-
 hr{
 		margin-top: var(--space-xl);
 	}
 h4{
-    	font-size: var(--font-size-m);
+    font-size: var(--font-size-m);
 		font-weight: var(--font-weight-semibold);
 		color: var( --text-color-white);
-    
 	}
 p{
   font-family: var( --font-family-text);
   font-size: var(--font-size-xs);
 }
 .grid_1-1{
-  	display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-	.box{
-       margin-left: 2rem ;
-       margin-top: 4rem;
-       margin-bottom: 8rem;
-		background-color: var(--trans-color);
-		border-radius: var(--border-radius-side-textbox);
-		padding: var(--space-xl);
-
-    
-		}
+.box{
+  margin-left: 2rem ;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+	background-color: var(--trans-color);
+	border-radius: var(--border-radius-side-textbox);
+	padding: var(--space-xl);
+}
 @media only screen and (min-width: 768px){
-
   .grid_1-1{
     display: grid;
-			grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
   }
-
+  .grid_box{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+  .box{
+    position: relative;
+    float: right;
+  }
+  .grid_tekst{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img {
+    margin-left: 0;
+  }
 }
+@media only screen and (min-width: 1210px){
+  .box {
+    border-radius: var(--border-radius-textbox);
+  }
+  img{
+    border-radius: var(--border-radius-image);
+  }
+}
+
 </style>

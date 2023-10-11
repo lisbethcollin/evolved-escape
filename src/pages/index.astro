@@ -43,26 +43,30 @@ import MainLayout from "../layouts/MainLayout.astro"
 				<h6>Sara Lerén</h6>
 			</section>
 		</section>
-        <button>See all</button>
+		<a href="/speakers"><button>See all</button></a>
     </article>
 
     <article>
-        <section>
-            <img src="" alt="">
-            <h4>Connect with peers</h4>
+        <section class="grid_1-1">
+            <img src="/public/imgs/conference/flot_mand.webp" alt="flot_mand" id="img_left">
+            <div id="text_right">
+			<h4>Connect with peers</h4>
             <p>UX Copenhagen connects people from all over the world for essential conversations. Our speakers are a wonderful mix of professionals, ranging from juniors new to the field to big names in the field. Each year, we have around 200 participants, 75% of whom are international guests. It will be held entirely in English. Attendees are UX professionals, digital leaders, digital strategists, and marketing professionals from all parts of the world and those who work with and around them. </p>
-        </section>
+			</div>
+		</section>
 
-        <section>
-            <img src="" alt="">
+        <section class="grid_1-1">
+			<div id="text_left">
             <h4>A Decade of Innovation & Impact</h4>
             <p>The 2024 event will be the 10th consecutive UX Copenhagen conference. The conference respects principles like having a diverse range of speakers, and presenting as many different points of view as possible on stage. We support charities, new startups, and initiatives that promote UX and doing good. The conference will be a hybrid event, in-person and online. We will be hosting hands-on, live workshops; and live Q&A sessions with each of this year´s speakers. There will be raffles, book sales, and lots of opportunity to network.</p>
+			</div>
+			<img src="/public/imgs/conference/Lone&Helle.webp" alt="Lone og Helle" id="img_right">
         </section>
     </article>
 	
     <article>
         <h3>Get your ticket</h3>
-        <p>Join us and experience the chance to learn from a diverse range of industry experts and connect with peers!</p>
+        <p >Join us and experience the chance to learn from a diverse <br> range of industry experts and connect with peers!</p>
     <button>Buy now</button>
     </article>
 	<h3>Why we´re great!</h3>
@@ -167,12 +171,25 @@ import MainLayout from "../layouts/MainLayout.astro"
 	.box_shadow section{
 		background-color: var(--trans-color);
 		padding: var(--space-box-mobile);
-		box-shadow: var(--img-shadow-down);
+		box-shadow: var(--box-shadow-down);
 		border-radius: 3rem;
 		width: 150px;
 		height: 150px;
 		text-align: center;
 		justify-content: center;
+	}
+	#img_left, #img_right {
+		border-radius: var(--border-radius-image);
+		position: relative;
+	}
+	#img_left {
+		box-shadow: var(--img-shadow-left-down);
+		left: -4rem;
+	}
+	#img_right {
+		box-shadow: var(--img-shadow-up);
+		right: -4rem;
+		overflow: clip;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
@@ -207,6 +224,27 @@ import MainLayout from "../layouts/MainLayout.astro"
 		padding: var(--space-box);
 		width: 300px;
 		height: 300px;
+	}
+	#img_left, #img_right {
+		border-radius: 1rem;
+	}
+	#img_left {
+		left: -4rem;
+	}
+	#img_right {
+		right: -4rem;
+	}
+	.grid_1-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		margin-top: 3rem;
+	}
+	#text_right {
+		margin-right: 2rem;
+	}
+	#text_left {
+		margin-left: 2rem;
 	}
 	}
 </style>
