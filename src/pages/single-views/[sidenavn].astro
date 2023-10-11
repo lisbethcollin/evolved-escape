@@ -24,23 +24,34 @@ const { speaker } = Astro.props;
 
 <MainLayout>
     <section class="grid_1-1">
-            <img src={"/imgs/speakers/" + speaker.img} alt="">
-    <article>
+            <img class="grig_img" src={"/imgs/speakers/" + speaker.img} alt="">
+    <article class="grid_tekst">
         <h7>2024 speaker</h7>
         <h1>{speaker.name}</h1>
         <h7 class="blaah7">{speaker.employment}</h7>
      <hr>
     </article>
 </section>
-<section class="box">
-<h7 class="orangeh7">Talk theme</h7>
-<h4>{speaker.talk_theme}</h4>
-<p>{speaker.talk_description}</p>
-</section>
+
+
+    <section class="box grid_box">
+      <div></div>
+      <div>
+      <h7 class="orangeh7">Talk theme</h7>
+      <h4>{speaker.talk_theme}</h4>
+      <p>{speaker.talk_description}</p>
+    </div>
+    </section>
+
 </MainLayout>
 
 <style>
-
+  
+  .box h7,
+  .box h4,
+  .box p {
+    margin-top: 10px; /* Tilføj et mellemrum over h7, h4 og p inden for .box */
+  }
   article{
     padding-left: 2rem;
     
@@ -53,11 +64,10 @@ h1{
       
 }
 /* her er en img bottom regl */
-img{
+ img{
   border-radius: var(  --border-radius-side-image);
 
-   margin-bottom: 3rem;
-  
+margin-bottom: 3rem;
 }
 
 h7{
@@ -107,6 +117,24 @@ p{
     display: grid;
 			grid-template-columns: 1fr 1fr;
   }
+img{
+border-radius: var(--border-radius-image);
+}
+.grid_box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.box{
+  border-radius: var( --border-radius-textbox);
+  position: relative;
+  float: right;
+}
+.grid_tekst{
+    grid-column: 2;
+    grid-row: 1;
+   margin-top: 200px; 
+}
+
 
 }
 </style>
