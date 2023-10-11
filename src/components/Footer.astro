@@ -1,33 +1,51 @@
 ---
 import "../styles/global.css";
 ---
-<section>
-    <article>
+<section class="baugrund">
+    <article class="spacing">
         <h6>Become a Sponser</h6>
         <p>Please reach out to:</p>
         <p id="mail">hello@uxcopenhagen.com</p>
         <p>Between April 1 – September 1.</p>
     </article>
 
-    <article>
+    <article class="spacing">
         <h6>Follow us on Social Media</h6>
         <article class="logo_grid">
-            <img src="public/imgs/icons/facebook.webp" alt="">
-            <img src="public/imgs/icons/instagram.webp" alt="">
-            <img src="public/imgs/icons/youtube.webp" alt="">
-            <img src="public/imgs/icons/linkedin.webp" alt="">
+            <img src="/public/imgs/icons/facebook.webp" alt="">
+            <img src="/public/imgs/icons/instagram.webp" alt="">
+            <img src="/public/imgs/icons/youtube.webp" alt="">
+            <img src="/public/imgs/icons/linkedin.webp" alt="">
         </article>
     </article>
 
-    <article>
+    <article class="spacing">
         <h6>Sign up for our newletter</h6>
         <button>Keep in touch</button>
     </article>
+   
+   <h2 id="logo">UX</h2>
+   
 </section>
-<img src="" alt="">
+
 
 <style>
+    .baugrund{
+        background-color: var(--trans-color);
+         display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer vandret */
+    justify-content: center; /* Centrerer lodret */
+    text-align: center; 
+       
+    }
+    
+    .spacing{
+    margin-bottom: 50px; /* Ændre dette tal for at justere mellemrummet efter behov */
+}
+
     h6{
+        
         font-family: var(--font-family-header);
         font-size: var(--font-size-m);
     }
@@ -59,7 +77,13 @@ import "../styles/global.css";
     article{
 
     }
+    .baugrund article img {
+    display: block;
+    margin: 0 auto;
+        
+}
     img {
+    
         width: 10%;
     }
     @media only screen and (min-width: 768px) {

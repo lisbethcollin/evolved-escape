@@ -63,12 +63,13 @@ import MainLayout from "../layouts/MainLayout.astro"
 			<img src="/public/imgs/conference/Lone&Helle.webp" alt="Lone og Helle" id="img_right">
         </section>
     </article>
-	
+	<hr>
     <article>
         <h3>Get your ticket</h3>
         <p >Join us and experience the chance to learn from a diverse <br> range of industry experts and connect with peers!</p>
     <button>Buy now</button>
     </article>
+	<hr>
 	<h3>Why we´re great!</h3>
     <article class="box_shadow">
 		<section>
@@ -178,8 +179,12 @@ import MainLayout from "../layouts/MainLayout.astro"
 		text-align: center;
 		justify-content: center;
 	}
+	.grid_1-1{
+		position: relative;
+  		overflow-x: hidden;
+	}
 	#img_left, #img_right {
-		border-radius: var(--border-radius-image);
+		border-radius: 1rem;
 		position: relative;
 	}
 	#img_left {
@@ -189,7 +194,6 @@ import MainLayout from "../layouts/MainLayout.astro"
 	#img_right {
 		box-shadow: var(--img-shadow-up);
 		right: -4rem;
-		overflow: clip;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
@@ -197,9 +201,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.mobile_hidden{
-		display: block;
-		font-size: var(--font-size-h1);
-	}
+			display: block;
+			font-size: var(--font-size-h1);
+		}
 		.desktop_hidden {
 			display: none;
 		}
@@ -214,37 +218,43 @@ import MainLayout from "../layouts/MainLayout.astro"
 			max-width: 80%;
 		}
 		.box_number{
-		font-size: var(--font-size-box);
-	}
-	.box_text{
-		font-size: var(--font-size-l);
-	}
+			font-size: var(--font-size-box);
+		}
+		.box_text{
+			font-size: var(--font-size-l);
+		}
 		.box_shadow section{
-		border-radius: var(--border-radius-textbox);
-		padding: var(--space-box);
-		width: 300px;
-		height: 300px;
+			border-radius: var(--border-radius-textbox);
+			padding: var(--space-box);
+			width: 300px;
+			height: 300px;
+		}
+		#img_left, #img_right {
+			border-radius: var(--border-radius-image);
+		}
+		#img_left {
+			left: -4rem;
+		}
+		#img_right {
+			right: -4rem;
+		}
+		.grid_1-1 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			margin-top: 3rem;
+			overflow-x: clip;
+		}
+		#text_right {
+			margin-right: 2rem;
+		}
+		#text_left {
+			margin-left: 3rem;
+		}
 	}
-	#img_left, #img_right {
-		border-radius: 1rem;
-	}
-	#img_left {
-		left: -4rem;
-	}
-	#img_right {
-		right: -4rem;
-	}
-	.grid_1-1 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: center;
-		margin-top: 3rem;
-	}
-	#text_right {
-		margin-right: 2rem;
-	}
-	#text_left {
-		margin-left: 2rem;
+	@media only screen and (min-width: 1210px) {
+		.grid_1-1{
+  			overflow-x: visible;
 	}
 	}
 </style>
