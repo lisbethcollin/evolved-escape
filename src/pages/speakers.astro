@@ -15,7 +15,9 @@ import Card from "../components/Card.astro";
 ---
 
 <MainLayout>
-    <h1>Speakers</h1>
+  <h1>WELCOME OUR SPEAKERS</h1>
+  <div>
+    <h2>Speakers 2024</h2>
     <section>
         {
           data.map((thing) => {
@@ -23,13 +25,32 @@ import Card from "../components/Card.astro";
           })
         }
       </section>
+      </div>
 </MainLayout>
 
 <style>
+ 
+  @media only screen and (max-width: 768px){
+    div{
+display: grid;
+place-items: center;
+}
+ }
+ section{
+  display: grid;
+  place-items: center;
+grid-template-columns: 1fr;
+max-width: 300px;
+ }
   @media only screen and (min-width: 768px) {
     section{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
     }
+  h1{
+      text-align: center;
+    }
+
   }
 </style>
