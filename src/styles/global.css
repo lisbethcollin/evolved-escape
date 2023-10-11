@@ -106,6 +106,6 @@ button {
   border: none;
   color: var(--text-color-button);
 }
-button :hover {
+button:hover {
   background-color: var(--hover-color);
 }
