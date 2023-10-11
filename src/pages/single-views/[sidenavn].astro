@@ -26,9 +26,9 @@ const { speaker } = Astro.props;
     <section class="grid_1-1">
             <img src={"/imgs/speakers/" + speaker.img} alt="">
     <article>
-        <h7 class="hvidh7">2024 speaker</h7>
+        <h7>2024 speaker</h7>
         <h1>{speaker.name}</h1>
-        <h7 class="blåh7">{speaker.employment}</h7>
+        <h7 class="blaah7">{speaker.employment}</h7>
      <hr>
     </article>
 </section>
@@ -40,19 +40,23 @@ const { speaker } = Astro.props;
 </MainLayout>
 
 <style>
+
+  article{
+    padding-left: 2rem;
+    
+    }
   /* her er en marginleft regl 2rem */
 h1{
   font-family: var( --font-family-header); 
     	font-size: var( --font-size-h1-mobile);
        	color: var(--text-color-overskrift);
-        margin-left: 2rem;
+      
 }
 /* her er en img bottom regl */
 img{
   border-radius: var(  --border-radius-side-image);
-   
-   box-shadow: var(  --img-shadow-down);
-   margin-bottom: 4rem;
+
+   margin-bottom: 3rem;
   
 }
 
@@ -60,13 +64,9 @@ h7{
   font-family: var( --font-family-text);
   font-size: var(--font-size-xs);
 }
-.hvidh7{
-   margin-left: 2rem;
-}
-.blåh7{
-  color: var(--text-color-other);
-   margin-left: 2rem;
-   margin-top: 10rem;
+
+.blaah7{
+  color: var(--text-color-other); 
 }
 .orangeh7{
   color: var(  --text-color-overskrift);
