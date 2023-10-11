@@ -57,7 +57,8 @@
 
   /* Box shadow */
   --text-shadow: -5px 5px 0px #531a6f;
-  --img-shadow-down: -10px 10px 0px 0px #531a6f;
+  --box-shadow-down: -10px 10px 0px 0px #531a6f;
+  --img-shadow-down: 10px 10px 0px 0px #531a6f;
   --img-shadow-left-down: 10px 10px 0px 0px #531a6f;
   --img-shadow-up: -10px -10px 0px 0px #531a6f;
 }
