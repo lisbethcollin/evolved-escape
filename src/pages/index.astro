@@ -70,7 +70,7 @@ import MainLayout from "../layouts/MainLayout.astro"
     <button>Buy now</button>
     </article>
 	<hr>
-	<h3>Why we´re great!</h3>
+	<h3 id="great">Why we´re great!</h3>
     <article class="box_shadow">
 		<section>
             <p class="box_number">9</p>
@@ -204,6 +204,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 	#img_left {
 		box-shadow: var(--img-shadow-left-down);
 		left: -4rem;
+		margin-top: 4rem;
 	}
 	#img_right {
 		box-shadow: var(--img-shadow-up);
@@ -213,6 +214,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 	#text_right{
 		margin: 30px;
 		padding: var( --space-md);
+	}
+	#text_right p, #text_left p{
+line-height: 1.8;
 	}
 	#text_right h4{
 		text-align: center;
@@ -229,8 +233,11 @@ import MainLayout from "../layouts/MainLayout.astro"
 	}
 
 	#join_us{
-		margin: 30px;
+		margin: 10px;
 		text-align: center;
+	}
+	#great{
+		margin-top: 4rem;
 	}
 	@media only screen and (min-width: 768px) {
 		.grid_1-1-1{
