@@ -31,8 +31,20 @@ import Card from "../components/Card.astro";
 <style>
    h1{
       text-align: center;
+      font-family: var( --font-family-header); 
+    	font-size: var( --font-size-h1-mobile);
+       	color: var(--text-color-overskrift);
+        text-shadow: var(--text-shadow);
+        margin-bottom: 4rem;
+        margin-top: 1rem;
     }
-
+h2{
+  font-family: var();
+color: var(--text-color-other);
+font-size: var(--font-size-xl);
+font-weight: var( --font-weight-semibold);
+margin-bottom: 2rem;
+}
 
  article{
   display: grid;
@@ -47,6 +59,20 @@ grid-template-columns: 1fr;
       display: grid;     
 grid-template-columns: 1fr 1fr ;
     }
+      h1{
+      text-align: center;
+      font-family: var(--font-family-header); 
+    	font-size: var( --font-size-h2);
+       	color: var(--text-color-overskrift);
+        text-shadow: var(--text-shadow);
+    }
+    h2{
+  font-family: var();
+color: var(--text-color-other);
+font-size: var(--font-size-xxl);
+font-weight: var( --font-weight-semibold);
+}
+  
  }
 
 
