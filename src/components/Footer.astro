@@ -92,5 +92,25 @@ import "../styles/global.css";
       grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
     }
+
+    .baugrund {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Del i 3 kolonner */
+    gap: 20px; /* Tilføj en mellemrum mellem sektioner */
+}
+
+.spacing {
+    
+    padding: 20px; /* Tilføj indvendig padding til hver sektion (valgfrit) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center indholdet i hver sektion */
+    text-align: center; /* Center tekst i hver sektion */
+}
+h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
   }
 </style>
