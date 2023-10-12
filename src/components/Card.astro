@@ -5,7 +5,7 @@ const { data } = Astro.props;
 <a href=`single-views/${data.slug}`>
 <article>
     <div class="round-image-container">
-        <img src={"imgs/speakers/" + data.img} alt="" class="round-image">
+        <img src={"/public/imgs/speakers/" + data.img} alt="" class="round-image">
     </div>
     <h4>{data.name}</h4>
     <h7>{data.employment}</h7>
