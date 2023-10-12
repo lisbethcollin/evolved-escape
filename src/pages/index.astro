@@ -94,6 +94,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 </MainLayout>
 
 <style>
+	hr{
+		margin: 0 15%;
+	}
     h1{
     	font-size: var( --font-size-h1-mobile);
        	color: var(--text-color-overskrift);
@@ -127,7 +130,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 	}
 	.bottom_border{
 		border-bottom: solid;
-		margin: 0 40%;
+		margin: 0 20%;
 	}
 	.bottom_border h5:last-child{
 		margin-bottom: 10%;
@@ -277,7 +280,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			align-items: center;
-			margin-top: 3rem;
+			margin: 2rem 0;
 			overflow-x: clip;
 		}
 		#text_right {
@@ -286,6 +289,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 		#text_left {
 			margin-left: 3rem;
 		}
+		.bottom_border{
+		margin: 0 35%;
+	}
 	}
 	@media only screen and (min-width: 1210px) {
 		.grid_1-1{
