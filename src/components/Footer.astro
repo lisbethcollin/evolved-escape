@@ -3,7 +3,7 @@ import "../styles/global.css";
 ---
 <section class="baugrund">
     <article class="spacing">
-        <h6>Become a Sponser</h6>
+        <h6 class="becom">Become a Sponser</h6>
         <p>Please reach out to:</p>
         <p id="mail">hello@uxcopenhagen.com</p>
         <p>Between April 1 – September 1.</p>
@@ -43,11 +43,14 @@ import "../styles/global.css";
     .spacing{
     margin-bottom: 50px; /* Ændre dette tal for at justere mellemrummet efter behov */
 }
-
+.becom{
+    margin-top: 30px;
+}
     h6{
         
         font-family: var(--font-family-header);
         font-size: var(--font-size-m);
+        margin-bottom: 20px;
     }
     p{
         font-family: var(--font-family-text);
@@ -92,5 +95,27 @@ import "../styles/global.css";
       grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
     }
+
+    .baugrund {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Del i 3 kolonner */
+    gap: 20px; /* Tilføj en mellemrum mellem sektioner */
+}
+
+.spacing {
+    
+    padding: 20px; /* Tilføj indvendig padding til hver sektion (valgfrit) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center indholdet i hver sektion */
+    text-align: center; /* Center tekst i hver sektion */
+}
+h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.becom{
+    margin-top: 40px;
+}
   }
 </style>
