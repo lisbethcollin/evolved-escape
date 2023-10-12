@@ -4,10 +4,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 <MainLayout>
     <section>
-        <article>
+        <article class="bottom_border">
         <h5 id="blue-text">20-21 MARCH 2024</h5>
         <h5>BIG BIO - NORDHAVN</h5>
-		<hr>
         </article>
       	<article>
         <h1 class="desktop_hidden">DE- <br> GROWTH <br> & <br> CONSU- <br> MERISME</h1>
@@ -56,11 +55,12 @@ import MainLayout from "../layouts/MainLayout.astro"
 		</section>
 
         <section class="grid_1-1">
+			<img src="/public/imgs/conference/Lone&Helle.webp" alt="Lone og Helle" id="img_right">
 			<div id="text_left">
             <h4>A Decade of Innovation & Impact</h4>
             <p>The 2024 event will be the 10th consecutive UX Copenhagen conference. The conference respects principles like having a diverse range of speakers, and presenting as many different points of view as possible on stage. We support charities, new startups, and initiatives that promote UX and doing good. The conference will be a hybrid event, in-person and online. We will be hosting hands-on, live workshops; and live Q&A sessions with each of this year´s speakers. There will be raffles, book sales, and lots of opportunity to network.</p>
 			</div>
-			<img src="/public/imgs/conference/Lone&Helle.webp" alt="Lone og Helle" id="img_right">
+			
         </section>
     </article>
 	<hr>
@@ -80,6 +80,8 @@ import MainLayout from "../layouts/MainLayout.astro"
         	<p class="box_number">20+</p>
         	<p class="box_text">Speakers each year</p>
     	</section>
+	</article>
+	<article class="box_shadow">
      	<section>
         	<p class="box_number">75+</p>
         	<p class="box_text">Workshops hosted</p>
@@ -122,6 +124,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 	p{
 		font-family: var(--font-family-text); 
     	font-size: var(--font-size-xs);
+	}
+	.bottom_border{
+		border-bottom: solid;
 	}
 	#blue-text{
 		color: var(--text-color-other);
@@ -166,22 +171,24 @@ import MainLayout from "../layouts/MainLayout.astro"
 		font-weight: var(--font-weight-semibold);
 	}
 	.box_shadow{
-		display: grid;
-		grid-template-columns: auto auto;
+		display: flex;
+		justify-content: center;
+  		align-items: center;
+		gap: 5%;
+		margin-bottom: 3rem;
 	}
 	.box_shadow section{
 		background-color: var(--trans-color);
 		padding: var(--space-box-mobile);
 		box-shadow: var(--box-shadow-down);
 		border-radius: 3rem;
-		width: 150px;
-		height: 150px;
-		text-align: center;
-		justify-content: center;
+  		width: 150px;
+  		height: 150px;
+  		text-align: center;
 	}
 	.grid_1-1{
 		position: relative;
-  		overflow-x: hidden;
+  		overflow-x: clip;
 	}
 	#img_left, #img_right {
 		border-radius: 1rem;
@@ -260,6 +267,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 		}
 		#img_right {
 			right: -4rem;
+			order: 1;
 		}
 		.grid_1-1 {
 			display: grid;
