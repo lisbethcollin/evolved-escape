@@ -26,18 +26,7 @@ import Card from "../components/Card.astro";
         }
       </section>
     </article>
-    <br>
-    <br>
-    <article>
-    <h2>Previous Speakers 2023</h2>
-    <section>
-        {
-          data.map((thing) => {
-            return <Card data={thing} />;
-          })
-        }
-      </section>
-    </article>
+  
 </MainLayout>
 
 <style>
@@ -64,6 +53,7 @@ margin-bottom: 1rem;
 grid-template-columns: 1fr;
 margin-bottom: 5rem;
  }
+ 
 
  @media only screen and (min-width: 768px){
 
